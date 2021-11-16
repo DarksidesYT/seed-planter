@@ -19,7 +19,7 @@ class PlayerListener implements Listener {
         $block = $event->getBlock();
         if ($event->getAction() === PlayerInteractEvent::RIGHT_CLICK_BLOCK) {
             if (isset(Utils::getIntoConfig("items")[$item->getId()])) {
-                if ($block->getId() === Block::FARMLAND) {
+                if ($block->getId() === Block::FARMLAND,SOUL_SAND) {
                     $radius = Utils::getIntoConfig("items")[$item->getId()];
                     $seeds = self::getSeeds($player);
                     $minX = $block->getX() - $radius;
